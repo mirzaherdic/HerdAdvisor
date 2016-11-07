@@ -1,0 +1,286 @@
+﻿  body
+{
+  background-color: #1A1A1A;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+[class*="Red"]
+{
+	display: flex;
+	width: 100%;
+	float: left;
+}
+.Red
+{
+	
+}
+.Red-5
+{
+	height: 5vh;
+}
+.Red-10
+{
+	height: 10vh;
+}
+.RedNaKraju
+{
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+.RedIzmedju
+{
+	height: 2.5vh;
+	border-bottom: 1px solid white;
+	margin-bottom: 2.5vh;
+}
+
+[class*="Kol-"] {
+    float: left;
+    padding: 15px;
+}
+.Kol-1 {width: 8.33%;}
+.Kol-2 {width: 16.66%;}
+.Kol-3 {width: 25%;}
+.Kol-4 {width: 33.33%;}
+.Kol-5 {width: 41.66%;}
+.Kol-6 {width: 50%;}
+.Kol-7 {width: 58.33%;}
+.Kol-8 {width: 66.66%;}
+.Kol-9 {width: 75%;}
+.Kol-10 {width: 83.33%;}
+.Kol-11 {width: 91.66%;}
+.Kol-12 {width: 100%;}
+
+
+/* Meni */
+ul.Meni
+{
+	font-family: "Impact", Charcoal, sans-serif;
+	list-style-type: none;
+	float: left;
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+ul.Meni li
+{
+	float: left;
+	width: 20%;
+	min-width: 10%;
+	margin: auto;
+}
+
+ul.Meni li a
+{
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 200%;
+	color: #FFFFFF;
+	background-color: #1A1A1A;
+}
+ul.Meni li a:hover
+{
+	background-color: #404040;
+}
+
+ul.Meni li.active a
+{
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 200%;
+	color: #FFFFFF;
+	background-color: #404040;
+}
+
+div.Meni
+{
+	display: block;
+	background-color: #1A1A1A;
+	height: 10vh;
+}
+
+
+/* Novosti */
+div.Novost
+{
+	min-width: 65vw;
+}
+
+img.Slika, img.Logo
+{
+	width: 100%;
+	float: left;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+p.TekstNovosti, p.DJDate, p.Uskoro
+{
+	color: #FFFFFF;
+	text-align: justify;
+	word-wrap: break-word;
+}
+
+/* Lista Top 100 DJ-eva */
+h1.Top100, h1.Festival, h1.Kuca
+{
+	font-size: 200%;
+	font-family: "Arial Black", Gadget, sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+div.KolonaZaBroj
+{
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+p.Broj
+{
+	font-size: 300%; 
+	color: #FFFFFF;
+	display: inline;
+}
+
+img.DJSlika
+{
+	width: 25%;
+	min-width: 110px;
+	float: left;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+p.DJDate::before
+{
+	content: "Slijedeći nastup: ";
+}
+a.DJLink, a.LinkNovosti, a.LinkFestivala, a.LinkKuce
+{
+	font-size: 100%;
+	text-decoration: none;
+	color: #EEFF00;
+	background-color: #1A1A1A;
+	margin-left: 10px;
+}
+a.DJLink:hover, a.LinkNovosti:hover, a.LinkFestivala:hover, a.LinkKuce:hover
+{
+	color: #1A1A1A;
+	background-color: #EEFF00;
+}
+a.EventLink
+{
+	font-size: 100%;
+	text-decoration: none;
+	color: #EEFF00;
+	background-color: #1A1A1A;
+}
+a.EventLink:hover
+{
+	color: #1A1A1A;
+	background-color: #EEFF00;
+}
+
+/* Festivali */
+img.SlikaFestivala, img.SlikaKuce, img.SlikaNovosti
+{
+	display: block;
+	float: left;
+	width: 300px;
+	min-width: 300px;
+	border: 1px solid #FFFFFF;
+	margin: 5px;
+}
+div.Kol-test
+{
+	display: inline;
+	width: 322px;
+	min-width: 322px;
+}
+p.Zastava
+{
+	display: inline;
+	margin-left: 10px;
+	color: #FFFFFF;
+}
+.Kol-Festival, .Kol-Kuca, .Kol-Novost, .Kol-Pocetna
+{
+	width: 25%;
+	min-width: 312px;
+}
+
+.Kol-ONama
+{
+	width: 100%;
+}
+
+/* Muzika */
+
+
+/* O Nama */
+p.ONama
+{
+	color: #FFFFFF;
+	font-size: 150%;
+	text-align: justify;
+}
+form.Forma
+{
+	color: white;
+}
+
+input[type="text"]
+{
+	width: 440px;
+	padding: 12px 20px;
+	margin: 8px 0;
+    box-sizing: border-box;
+    border-width: 5px;
+}
+input[type="text"]:focus
+{
+	border-color: #EEFF00;
+}
+textarea.Poruka
+{
+	width: 100%;
+}
+p.TekstZaFormu
+{
+	color: #FFFFFF;
+	font-size: 150%;
+}
+
+/* Dno stranice */
+a.Link
+{
+	text-decoration: none;
+	padding: 10px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #1A1A1A;
+}
+a.Link:hover
+{
+	color: #1A1A1A;
+	background-color: #FFFFFF;
+}
+p.Autor
+{
+	color: #FFFFFF;
+}
+img.Logo
+{
+	cursor: pointer;
+}

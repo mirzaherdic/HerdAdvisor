@@ -1,0 +1,62 @@
+I) Uradio sam sve stavke a-f, s time da nisam u potpunosti popunio neke stranice(lista top 100 DJ-eva npr.) jer mislim da smisao zadaće nije da u potpunosti uradimo zadaću nego samo demonstriramo da radi. Također i ostale stranice se mogu popuniti sa proizvoljnim brojem elemenata(uvijek se može dodati još festivala, izdavačkih kuća i slično).
+II) /
+III) Kada se širina stranica DJ-eva smanji na minimalnu vrijednost Ime DJ-a se ispiše u 2 linije, što po meni nije bug, ali bi se lagano mogao riješiti smanjivanjem fonta DJ-a. Ipak ko posjeduje tako male uređaje mora se malo prilagoditi modernim vremenima.
+IV) /
+V) Lakše je nabrojati po tipu fajla.
+       - html fajlovi(html kod za stranice)[6]: 
+       		- Pocetna.html
+       		- DJ.html
+       		- Festivali.html
+       		- Muzika.html
+       		- ONama.html
+       		- Uskoro.html
+       - css fajlovi(za izgled desktop i mobilne verzije)[2]: 
+       		- Stil.css
+       		- StilMobilni.css
+       - Ikonice država u kojima se održava festival[10]: 
+       		- au.gif
+       		- ch.gif
+       		- co.gif
+       		- fr.gif
+       		- hu.gif
+       		- ic.gif
+       		- il.gif
+       		- me.gif
+       		- nl.gif
+       		- pl.gif
+       - Slike DJ-eva[6]: 
+       		- BenUFO.jpg
+       		- Dixon.jpg
+       		- Jackmaster.jpg
+       		- MaceoPlex.jpg
+       		- RicardoVillalobos.jpg
+       		- TaleOfUs.jpg
+       - Slike za novosti[4]: 
+       		- BPMFestival.jpg
+       		- JG.jpg
+       		- Elektron.jpg
+       		- Kamixlo.jpg
+       - Slike Festivala[9]: 
+       		-BackslashFestival.jpg
+       		- BaumFestival.jpg
+       		- BonuszFestival.jpg
+       		- FascinomaFestival.jpg
+       		- FestivalLesNuitsElectriques.jpg
+       		- Georgie'sWintergarten.jpg
+       		- GroundedFestival.jpg
+       		- HedoneFestival.jpg
+       		- IcelandAirwaves.jpg
+       - Slike izdavačkih kuća[8]: 
+       		-WeAreTheBrave.jpg
+       		- HardBeachEntertainment.jpg
+       		- KiRecords.jpg
+       		- 777Recordings.jpg
+       		- 1080p.jpg
+       		- AMadeUpSound.jpg
+       		- TriAngle.jpg
+       		- UIQ.jpg
+       - Logo ikonice stranice[2]: 
+       		- HAWhite.png
+       		- HABlack.png
+       - Readme fajl[1]: 
+        	- Readme.txt
