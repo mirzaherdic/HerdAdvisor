@@ -1,0 +1,88 @@
+<div class="Kol-12">
+<h1 class="Kuca">Izdavačke kuće</h1>
+</div>
+</div>
+
+<div class="Red-5"></div>
+
+<div class="Red">
+
+<div class="Kol-1"></div>
+
+<div class="Kol-10">
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="WeAreTheBrave.jpg" alt="We Are The Brave">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=13906">
+We Are The Brave</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="HardBeachEntertainment.jpg" alt="Hard Beach Entertainment">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=14239">
+Hard Beach Entertainment</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="KiRecords.jpg" alt="Ki Records">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=3179">
+Ki Records</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="777Recordings.jpg" alt="777 Recordings">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=10674">
+777 Recordings</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="1080p.jpg" alt="1080p">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=10775">
+1080p</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="AMadeUpSound.jpg" alt="A Made Up Sound">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=3717">
+A Made Up Sound</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="TriAngle.jpg" alt="Tri Angle">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=5115">
+Tri Angle</a></div>
+<div class="Red">
+</div>
+</div>
+
+<div class="Kol-Kuca">
+<img class="SlikaKuce" src="UIQ.jpg" alt="UIQ">
+<div class="Red">
+<a class="LinkKuce" href="https://www.residentadvisor.net/record-label.aspx?id=12822">
+UIQ</a></div>
+<div class="Red">
+</div>
+</div>
+
+</div>
+
+<div class="Kol-1"></div>

@@ -1,0 +1,54 @@
+<div class="Red">
+<div class="Kol-3"></div>
+
+<div class="Kol-10">
+
+<div class="Kol-Novost">
+<img class="SlikaNovosti" src="JG.jpg" alt="Ecologies II">
+<div class="Novost">
+<a class="LinkNovosti" href="https://www.residentadvisor.net/promoter.aspx?id=65727">
+J.G. Biberkopf objavio album <i>Ecologies II: Ecosystems Of Excess</i> za izdavačku kuću Knives</a></div>
+<div class="Novost">
+<p class="TekstNovosti">Kudedova kuća će izbaciti prvi LP berlinskog producenta kasnije ovog mjeseca. Album će se objaviti jedanaestog novembra ove godine.</p>
+</div>
+</div>
+
+<div class="Red-10"></div>
+
+<div class="Kol-Novost">
+<img class="SlikaNovosti" src="BPMFestival.jpg" alt="BPM Festival">
+<div class="Novost">
+<a class="LinkNovosti" href="https://www.residentadvisor.net/news.aspx?id=37150">
+<i>BPM Festival</i>, desetodnevni festival u Playa del Carmenu slavi ovog januara 10 godina postojanja.</a></div>
+<div class="Novost">
+<p class="TekstNovosti">Organizatori BPM Festivala su već objavili dio lineupa za 2017. godinu. Ove godine festival će se održati od 6. do 15. januara.</p>
+</div>
+</div>
+
+<div class="Red-10"></div>
+
+<div class="Kol-Novost">
+<img class="SlikaNovosti" src="Elektron.jpg" alt="Analog Drive">
+<div class="Novost">
+<a class="LinkNovosti" href="https://www.residentadvisor.net/news.aspx?id=37147">
+Elektron izbacuje distorzionu pedalu <i>Analog Drive</i></a></div>
+<div class="Novost">
+<p class="TekstNovosti">8 različitih načina distorzije su uključeni za ispod 400$.</p>
+</div>
+</div>
+
+<div class="Red-10"></div>
+
+<div class="Kol-Novost">
+<img class="SlikaNovosti" src="Kamixlo.jpg" alt="Angélico">
+<div class="Novost">
+<a class="LinkNovosti" href="https://www.residentadvisor.net/news.aspx?id=37151">
+Kamixlo objavio novi EP, <i>Angélico</i></a></div>
+<div class="Novost">
+<p class="TekstNovosti">Kamixlo će objaviti svoju slijedeću ploču slijedeći petak, jedanaestog novembra u Bala Clubu.</p>
+</div>
+</div>
+
+</div>
+
+</div>

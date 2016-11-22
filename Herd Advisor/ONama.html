@@ -8,7 +8,7 @@
 	<link rel="stylesheet" media="screen and (max-width: 768px)" href="StilMobilni.css">
 </head>
 
-<body>
+<body onload="ucitajPodatke()">
 <!-- Meni -->
 <div class="Red">
 <div class="Kol-1"></div>
@@ -39,32 +39,35 @@
 </div>
 
 <p class="TekstZaFormu">Ostavite nam poruku:</p>
-<form class="Forma">
+<form class="Forma" name="FormaZaMailIPoruku" onsubmit="return validirajEmail()" method="post">
 	E-mail:<br>
-	<input type="text" name="E-mail"><br>
+	<input type="text" name="email"><br>
 	Poruka:<br>
 	<textarea name="TekstPoruke" cols="60" rows="5"></textarea><br>
+	<p class="TekstGreske" id="GreskaEmail"></p>
 	<input type="submit" value="Pošalji">
 </form>
 
 <div class="Red-10"></div>
 
 <p class="TekstZaFormu">Kako vam se sviđa stranica?</p>
-<form class="Forma">
+<form class="Forma" name="FormaZaOcjenu" onsubmit="return validirajOcjenu()" method="post">
 	<input type="radio" name="ocjena" value="1"> 1<br>
 	<input type="radio" name="ocjena" value="2"> 2<br>
 	<input type="radio" name="ocjena" value="3"> 3<br>
 	<input type="radio" name="ocjena" value="4"> 4<br>
 	<input type="radio" name="ocjena" value="5"> 5<br>
+	<p class="TekstGreske" id="GreskaOcjena"></p>
 	<input type="submit" value="Ocjeni">
 </form>
 
 <div class="Red-10"></div>
 
 <p class="TekstZaFormu">Da li slušate elektronsku muziku?</p>
-<form class="Forma">
+<form class="Forma" name="FormaZaSlusanje" onsubmit="return validirajSlusanje()" method="post">
 	<input type="radio" name="slusanje" value="da"> Da<br>
 	<input type="radio" name="slusanje" value="ne"> Ne<br>
+	<p class="TekstGreske" id="GreskaSlusanje"></p>
 	<input type="submit" value="Pošalji">
 </form>
 

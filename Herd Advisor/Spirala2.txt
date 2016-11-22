@@ -1,0 +1,17 @@
+I) Uradjeno:
+		- a) Validacija za sve forme
+		- b) Localstorage 2B
+		- c) Uradjeno ucitavanje podstranica pomocu AJAXa
+II) Nije uradjeno:
+		- b) Nisam radio nista osim localstoragea, dakle 2B neuradjena
+III) /
+IV) /
+V) Fajlovi koji su dodani/izmijenjeni:
+	- Pocetna.html
+	- test.txt
+	- DJContent.txt
+	- FestivalContent.txt
+	- MuzikaContent.txt
+	- ONamaContent.txt
+	- scripts.js
+	- Spirala2.txt
