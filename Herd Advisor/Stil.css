@@ -138,6 +138,12 @@ h1.Top100, h1.Festival, h1.Kuca
 	text-align: center;
 	color: #FFFFFF;
 }
+h1.Podaci
+{
+	font-size: 200%;
+	font-family: "Arial Black", Gadget, sans-serif;
+	color: #FFFFFF;
+}
 
 div.KolonaZaBroj
 {
@@ -175,6 +181,19 @@ a.DJLink, a.LinkNovosti, a.LinkFestivala, a.LinkKuce
 	margin-left: 10px;
 }
 a.DJLink:hover, a.LinkNovosti:hover, a.LinkFestivala:hover, a.LinkKuce:hover
+{
+	color: #1A1A1A;
+	background-color: #EEFF00;
+}
+a.LinkONama
+{
+	font-size: 300%;
+	text-decoration: none;
+	color: #EEFF00;
+	background-color: #1A1A1A;
+	margin-left: 10px;
+}
+a.LinkONama:hover
 {
 	color: #1A1A1A;
 	background-color: #EEFF00;
@@ -235,6 +254,12 @@ p.ONama
 	font-size: 150%;
 	text-align: justify;
 }
+p.ONamaVeliko
+{
+	color: #EEFF00;
+	font-size: 200%;
+	text-align: justify;
+}
 form.Forma
 {
 	color: white;
@@ -248,7 +273,19 @@ input[type="text"]
     box-sizing: border-box;
     border-width: 5px;
 }
+input[type="password"]
+{
+	width: 440px;
+	padding: 12px 20px;
+	margin: 8px 0;
+    box-sizing: border-box;
+    border-width: 5px;
+}
 input[type="text"]:focus
+{
+	border-color: #EEFF00;
+}
+input[type="password"]:focus
 {
 	border-color: #EEFF00;
 }
@@ -283,4 +320,9 @@ p.Autor
 img.Logo
 {
 	cursor: pointer;
+}
+
+span.greska
+{
+	color: #FFFFFF;
 }

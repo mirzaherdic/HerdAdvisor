@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<korisnici>
+  <korisnik>
+    <nickname>admin</nickname>
+    <password>admin</password>
+    <tip>admin</tip>
+  </korisnik>
+  <korisnik>
+    <nickname>ExitFestival</nickname>
+    <password>ExitFestival</password>
+    <tip>korisnik</tip>
+  </korisnik>
+  <korisnik>
+    <nickname>Olimpija</nickname>
+    <password>Sarajevo</password>
+    <tip>korisnik</tip>
+  </korisnik>
+  <korisnik>
+    <nickname>Resident Advisor</nickname>
+    <password>RA123asd123</password>
+    <tip>korisnik</tip>
+  </korisnik>
+  <korisnik>
+    <nickname>HerdAdvisor</nickname>
+    <password>Advisor123</password>
+    <tip>korisnik</tip>
+  </korisnik>
+  <korisnik>
+    <nickname>DJCarlCox</nickname>
+    <password>CarlCoxSpace</password>
+    <tip>korisnik</tip>
+  </korisnik>
+</korisnici>

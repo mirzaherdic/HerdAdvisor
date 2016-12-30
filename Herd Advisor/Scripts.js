@@ -42,6 +42,36 @@ function validirajSlusanje()
 	}
 	localStorage.setItem("slusanje", x);
 }
+function validirajRegistraciju()
+{
+	var nicknameRegex = /^[a-zA-Z0-9]+$/;
+	var x = document.forms["FormaZaRegistraciju"]["nickname"].value;
+	var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+	var y = document.forms["FormaZaRegistraciju"]["password"].value;
+
+	var z = document.getElementById("GreskaRegistracija");
+	if(x == null || x.length < 4)
+	{
+		z.innerHTML = "Nickname nije validan(Nickname mora biti duži od 3 karaktera).";
+		return false;
+	}
+	else if(!nicknameRegex.test(x))
+	{
+		z.innerHTML = "Nickname nije validan(Nickname smije sadržavati samo slova i brojeve).";
+		return false;
+	}
+	
+	if(y == null || y.length < 8)
+	{
+		z.innerHTML = "Password nije validan(Password mora biti dug barem 8 karaktera).";
+		return false;
+	}
+	else if(!passwordRegex.test(y))
+	{
+		z.innerHTML = "Password nije validan(Password mora sadržavati barem po jedno slovo i broj.).";
+		return false;
+	}
+}
 function ucitajPodatke()
 {
 	var email = localStorage.getItem("email");
@@ -66,7 +96,7 @@ function ucitajPocetnu()
 	    	updateujMeni(0);
 	    }
 	  };
-	xhttp.open("GET", "test.txt", true);
+	xhttp.open("GET", "PocetnaContent.html", true);
 	xhttp.send();
 	return false;
 }
@@ -79,7 +109,7 @@ function ucitajDJ()
 	    	updateujMeni(1);
 	    }
 	  };
-	xhttp.open("GET", "DJContent.txt", true);
+	xhttp.open("GET", "DJContent.html", true);
 	xhttp.send();
 	return false;
 }
@@ -92,7 +122,7 @@ function ucitajFestival()
 	    	updateujMeni(2);
 	    }
 	  };
-	xhttp.open("GET", "FestivalContent.txt", true);
+	xhttp.open("GET", "FestivalContent.html", true);
 	xhttp.send();
 	return false;
 }
@@ -105,7 +135,7 @@ function ucitajMuziku()
 	    	updateujMeni(3);
 	    }
 	  };
-	xhttp.open("GET", "MuzikaContent.txt", true);
+	xhttp.open("GET", "MuzikaContent.html", true);
 	xhttp.send();
 	return false;
 }
@@ -119,7 +149,7 @@ function ucitajONama()
 	    	ucitajPodatke();
 	    }
 	  };
-	xhttp.open("GET", "ONamaContent.txt", true);
+	xhttp.open("GET", "ONamaContent.php", true);
 	xhttp.send();
 	return false;
 }
@@ -127,4 +157,12 @@ function updateujMeni(x)
 {
 	document.getElementsByClassName("active")[0].className = "";
 	document.getElementsByTagName("li")[x].className = "active";
+}
+function ucitaj()
+{
+	var x = document.getElementById("testnaslov");
+	var y = document.getElementById("testtekst");
+
+	document.getElementById("naslov").innerHTML = x;
+	document.getElementById("tekst").innerHTML = y;
 }

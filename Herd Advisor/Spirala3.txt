@@ -1,0 +1,4 @@
+Uradjeno:
+  - Sve
+Nije uradjeno:
+  - Nista

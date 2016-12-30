@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<recenzije>
+  <recenzija>
+    <recenzent>admin</recenzent>
+    <naslov>Space</naslov>
+    <tekst>Space je jedan od najpoznatijih klubova na Ibizi.</tekst>
+    <autor>admin</autor>
+  </recenzija>
+  <recenzija>
+    <recenzent>admin</recenzent>
+    <naslov>Amsterdam Dance Event</naslov>
+    <tekst>ADE je ove godine zabiljezio...</tekst>
+  </recenzija>
+  <recenzija>
+    <recenzent>admin</recenzent>
+    <naslov>BPM Festival</naslov>
+    <tekst>Ove godine BPM festival ce...</tekst>
+  </recenzija>
+  <recenzija>
+    <recenzent>admin</recenzent>
+    <naslov>Exit festival</naslov>
+    <tekst>Exit festival ce se odrzati od 7-10 jula</tekst>
+  </recenzija>
+</recenzije>

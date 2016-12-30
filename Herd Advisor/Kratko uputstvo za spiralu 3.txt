@@ -1,0 +1,12 @@
+Kratko uputstvo za spiralu 3
+
+Sve novododane stvari se nalaze na ONama.php
+Dodana su 4 linka(registracija, prijava, recenzije i pretraga)
+
+Registrovati se moze samo ako nije vec prijavljen korisnik. Nickname mora biti izmedju 6 i 32 karaktera i moze sadrzavati samo slova i brojeve. Password mora biti izmedju 8 i 32 karaktera i smije sadrzavati samo slova i brojeve.
+
+Prijaviti se moze ako nije neko drugi vec prijavljen.
+
+Recenzije mogu gledati svi korisnici, ali samo admin korisnik moze da dodaje, brise i mijenja recenzije. Recenzije moze bilo ko da dobije u obliku pdf-a ili csv-a. 
+
+Pretraga ima 2 polja. Jedno pokazuje trenutne rezultate, a jedno rezultate od zadnjeg pritiska "pretrazi".
