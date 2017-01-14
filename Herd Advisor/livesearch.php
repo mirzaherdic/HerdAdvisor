@@ -1,48 +1,42 @@
 <?php
-$xmlKorisnici=new DOMDocument();
-$xmlKorisnici->load("korisnici.xml");
 
-$xmlRecenzije=new DOMDocument();
-$xmlRecenzije->load("recenzije.xml");
+include 'DB.php';
+
+$connection = new PDO("mysql:dbname=HerdAdvisorDB;host=localhost;charset=utf8", "Herda", "DBPassword");
+$connection->exec("set names utf8");
 
 $q=$_GET["q"];
-
-$k=$xmlKorisnici->getElementsByTagName('korisnik');
-$r=$xmlRecenzije->getElementsByTagName('recenzija');
-
 $broj = 0;
-if (strlen($q)>0) {
-  $hint="";
-  for($i = 0; $i < ($k->length); $i++)
-  {
-  	$x = $k->item($i)->getElementsByTagName('nickname');
-  	if($x->item(0)->nodeType == 1)
-  	{
-  		if(stristr($x->item(0)->childNodes->item(0)->nodeValue, $q) && $broj < 10)
-  		{
-  			if($hint == "")
-  				$hint= $x->item(0)->childNodes->item(0)->nodeValue;
-  			else
-  				$hint = $hint . "<br>" . $x->item(0)->childNodes->item(0)->nodeValue;
-        $broj++;
-  		}
-  	}
-  }
-  for($i = 0; $i < ($r->length); $i++)
-  {
-    $x = $r->item($i)->getElementsByTagName('naslov');
-    if($x->item(0)->nodeType == 1)
+
+if(strlen($q) > 0)
+{
+    $hint="";
+
+    $sql = "SELECT Nickname FROM Korisnici WHERE Nickname LIKE '%" . $q . "%';";
+    $result = dajRezultate($connection, $sql);
+    foreach ($result as $korisnik) 
     {
-      if(stristr($x->item(0)->childNodes->item(0)->nodeValue, $q) && $broj < 10)
-      {
+        if($broj >= 10)
+            break;
         if($hint == "")
-          $hint= $x->item(0)->childNodes->item(0)->nodeValue;
+            $hint = $hint . $korisnik['Nickname'];
         else
-          $hint = $hint . "<br>" . $x->item(0)->childNodes->item(0)->nodeValue;
+            $hint = $hint . "<br>" . $korisnik['Nickname'];
         $broj++;
-      }
     }
-  }
+
+    $sql = "SELECT Naslov FROM Recenzije WHERE Naslov LIKE '%" . $q . "%';";
+    $result = dajRezultate($connection, $sql);
+    foreach ($result as $recenzija) 
+    {
+        if($broj >= 10)
+            break;
+        if($hint == "")
+            $hint = $hint . $recenzija['Naslov'];
+        else
+            $hint = $hint . "<br>" . $recenzija['Naslov'];
+        $broj++;
+    }
 }
 
 if ($hint=="") {

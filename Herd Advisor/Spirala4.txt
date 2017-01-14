@@ -1,0 +1,6 @@
+Uradjeno pod a, b, c
+Nije uradjeno d, e, f
+
+Skripta za ubacivanje podataka u bazu je DBScript.php, poziva se sa podstranice ONama.php buttonom koji se nalazi na dnu stranice.
+SQL fajl baze je phpmyadmin.sql
+Naziv baze je HerdAdvisorDB, Username je "Herda", Password je "DBPassword".

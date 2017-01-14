@@ -13,15 +13,14 @@
 <?php
 session_start();
 
+include 'DB.php';
+
 $nickname = $password = "";
 $greskaNickname = $greskaPassword  = $greska = "";
-$xml = null;
 $korisnikPostoji = false;
 
-if(file_exists('korisnici.xml'))
-{
-	$xml = simplexml_load_file('korisnici.xml');
-}
+$connection = new PDO("mysql:dbname=HerdAdvisorDB;host=localhost;charset=utf8", "Herda", "DBPassword");
+$connection->exec("set names utf8");
 
 if(isset($_SESSION["name"]))
 {
@@ -39,15 +38,14 @@ else
 		}
 		else
 		{
-			if($xml)
-			{
-				foreach($xml->korisnik as $korisnik)
-					if($korisnik->nickname == $nickname)
-					{
-						$korisnikPostoji = true;
-						break;
-					}
-			}
+			$sql = "SELECT COUNT(*) AS Postoji FROM Korisnici WHERE Nickname = '" . $nickname . "';";
+			$result = dajRezultate($GLOBALS['connection'], $sql);
+			foreach($result as $postoji)
+				if ($postoji['Postoji'] > 0)
+				{
+					$korisnikPostoji = true;
+					break;
+				}
 			$password = test_input($_POST["password"]);
 		  	if(!preg_match('/^[A-Za-z]{1}[A-Za-z0-9]{7,31}$/', $password))
 		  	{
@@ -63,15 +61,8 @@ else
 				}
 				else
 				{
-					$korisnik = $xml->addChild('korisnik');
-					$korisnik->addChild('nickname', $nickname);
-					$korisnik->addChild('password', $password);
-					$korisnik->addChild('tip', 'korisnik');
-					$dom = new DOMDocument('1.0');
-					$dom->preserveWhiteSpace = false;
-					$dom->formatOutput = true;
-					$dom->loadXML($xml->asXML());
-					$dom->save('korisnici.xml');
+					$sql = "INSERT INTO Korisnici (ID, Nickname, Password, TipID) VALUES (NULL, '" . $nickname . "', '" . $password . "', '2');";
+					$count = upisi($GLOBALS['connection'], $sql);
 					$greska = "Uspjesno registrovan korisnik: " . $nickname;
 				}
 			}

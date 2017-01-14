@@ -11,65 +11,13 @@
 <body onload="ucitajPodatke()">
 
 <?php
-$nickname = $password = "";
-$greskaNickname = $greskaPassword = $greskaPrijava = "";
-$xml = null;
-$korisnikPostoji = false;
+session_start();
 
-if(file_exists('korisnici.xml'))
-{
-	$xml = simplexml_load_file('korisnici.xml');
-}
+include 'DBScript.php';
 
-//$xml = simplexml_load_file("korisnici.xml") or die("Gresla: Ne moze se kreirati objekat");
+if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['ubaciUBazu']))
+	ubaciUBazu();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-	$nickname = test_input($_POST["nickname"]);
-	if (!preg_match('/^[A-Za-z]{1}[A-Za-z0-9]{5,31}$/', $nickname))
-		$greskaNickname = "Nickname mora biti između 6 i 32 karaktera dug i smije sadržavati samo slova i brojeve";
-	else
-	{
-		if($xml)
-		{
-			foreach($xml->korisnik as $korisnik)
-				if($korisnik->nickname == $nickname)
-				{
-					$korisnikPostoji = true;
-					break;
-				}
-		}
-	}
-	$password = test_input($_POST["password"]);
-  	if(!preg_match('/^[A-Za-z]{1}[A-Za-z0-9]{7,31}$/', $password))
-  	{
-		$greskaPassword = "Password mora biti dug između 8 i 32 karaktera i smije sadržavati samo slova i brojeve";
-  	}
-	else
-	{
-		if($korisnikPostoji)
-		$greskaNickname = "Korisnik vec postoji";
-		else
-		{
-			$korisnik = $xml->addChild('korisnik');
-			$korisnik->addChild('nickname', $nickname);
-			$korisnik->addChild('password', $password);
-			$korisnik->addChild('tip', 'korisnik');
-			$dom = new DOMDocument('1.0');
-			$dom->preserveWhiteSpace = false;
-			$dom->formatOutput = true;
-			$dom->loadXML($xml->asXML());
-			$dom->save('korisnici.xml');
-		}
-	}
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
 ?>
 
 <!-- Meni -->
@@ -150,6 +98,20 @@ function test_input($data) {
 
 <div class="Novost"><a class="LinkONama" href="Pretraga.html">Pretraga</a></div>
 
+<div class="Red-10"></div>
+
+<?php
+
+if(isset($_SESSION["permissions"]) && $_SESSION["permissions"] == "admin")
+{
+?>
+<form class="Forma" name="FormaZaBazu" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+	<input type="submit" name="ubaciUBazu" value="Ubaci podatke u bazu">
+</form>
+<?php 
+}
+?>
+
 </div>
 
 
@@ -211,3 +173,4 @@ function test_input($data) {
 <script src="Scripts.js"></script>
 </body>
 </html>
+

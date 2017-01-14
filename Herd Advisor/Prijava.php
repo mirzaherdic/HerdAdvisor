@@ -13,12 +13,12 @@
 <?php
 session_start();
 
-$nickname = $password = $greskaPrijava = $greskaOdjava = "";
-$xml = null;
-$uspio = false;
+include 'DB.php';
 
-if(file_exists('korisnici.xml'))
-	$xml = simplexml_load_file('korisnici.xml');
+$nickname = $password = $greskaPrijava = $greskaOdjava = "";
+$uspio = false;
+$connection = new PDO("mysql:dbname=HerdAdvisorDB;host=localhost;charset=utf8", "Herda", "DBPassword");
+$connection->exec("set names utf8");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -32,19 +32,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		{
 			$nickname = test_input($_POST["nickname"]);
 			$password = test_input($_POST["password"]);
-			if($xml)
-			{
-				foreach($xml->korisnik as $korisnik)
-					if($korisnik->nickname == $nickname && $korisnik->password == $password)
-					{
-						session_destroy();
-						session_start();
-						$_SESSION["name"] = $nickname;
-						$_SESSION["permissions"] = (string)$korisnik->tip;
-						$uspio = true;
-						break;
+
+			$sql = "SELECT Password, TipID FROM Korisnici WHERE Nickname = '" . $nickname . "';";
+			$result = dajRezultate($GLOBALS['connection'], $sql);
+			foreach($result as $korisnik)
+				if ($korisnik['Password'] == $password)
+				{
+					session_destroy();
+					session_start();
+					$_SESSION["name"] = $nickname;
+					
+					$sql = "SELECT Tip FROM TipoviKorisnika WHERE ID = '" . $korisnik['TipID'] . "';";
+					$type = dajRezultate($GLOBALS['connection'], $sql);
+					$tip = null;
+					foreach ($type as $Tip) {
+						$tip = $Tip['Tip'];
 					}
-			}
+					$_SESSION["permissions"] = (string)$tip;
+					$uspio = true;
+					break;
+				}
 			if(!$uspio)
 				$greskaPrijava = "Pogrešan nickname ili password";
 		}
